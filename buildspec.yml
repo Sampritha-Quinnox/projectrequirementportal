@@ -9,5 +9,5 @@ phases:
       - mvn package
 artifacts:
   files:
-    - '**/*'
+    - build/target/*.jar
   base-directory: 'target/projectrequirement'
