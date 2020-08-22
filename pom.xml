@@ -13,7 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>projectrequirementportal</name>
 	<description>Demo project for Spring Boot</description>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	  
 	
 
@@ -89,7 +89,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		<finalName>projectrequirement</finalName>
+		<finalName>projectrequirementportal</finalName>
 	</build>
 
 </project>

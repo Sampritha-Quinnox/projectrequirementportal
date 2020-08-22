@@ -2,12 +2,12 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto8
+      java: corretto11
   build:
     commands:
       - java -version
       - mvn package
 artifacts:
   files:
-    - build/target/*.jar
+    - '**/*'
   base-directory: 'target/projectrequirement'
