@@ -1,4 +1,4 @@
-version: 0.1
+version: 0.2
 
 phases:
   install:
@@ -15,4 +15,5 @@ phases:
 artifacts:
   files:
     - target/projectrequirementportall
+    
   discard-paths: no
