@@ -91,7 +91,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		<finalName>projectrequirementportall</finalName>
+		<finalName>projectrequirementportalll</finalName>
 	</build>
 
 </project>

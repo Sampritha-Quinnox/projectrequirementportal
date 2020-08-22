@@ -6,14 +6,14 @@ phases:
       java: corretto8
   build:
     commands:
-            - java -version
-            - mvn package
+      - echo Build started on `date`
+      - mvn test 
   post_build:
     commands:
       - echo Build completed on `date`
       - mvn package
 artifacts:
   files:
-    - target/projectrequirementportall
-    
-  discard-paths: no
+    - target/projectrequirementportalll.jar
+    - appspec.yml
+  discard-paths: yes
