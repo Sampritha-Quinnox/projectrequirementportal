@@ -66,8 +66,7 @@ public class MainController {
 	
 	@RequestMapping("/")
 	public String viewHomePage(Model model) {
-	//	List<Project> listProject = service.listAll();
-	//	model.addAttribute("listProject", listProject);
+	
 		return "index";
 	}
 	@RequestMapping("/view")
@@ -138,20 +137,22 @@ public class MainController {
         model.addAttribute("applied", applied);
         return "viewapplied";
     }
-	
-	@RequestMapping("/apply")
-	public String applyproject(Model model){
 
-		Applied applied = new Applied();
-		model.addAttribute("applied", applied);	
-		return "apply";
-	}
+	 @RequestMapping(value = "/apply", method = RequestMethod.GET)
+	    public String apply(Model model) {
+	        model.addAttribute("applied", new Applied());
+
+	        return "apply";
+	    }
 	
-	@RequestMapping(value = "/saveapplication", method = RequestMethod.POST)
-	public String saveapplication(@ModelAttribute("applied") Applied applied,Model model) {
-		appliedService.save(applied);
-		return "redirect:/";
-	}
+
+    @RequestMapping(value = "/apply", method = RequestMethod.POST)
+    public String applied(@ModelAttribute("applied") Applied applied, Model model) {
+    	
+    	appliedService.save(applied);
+
+        return "redirect:/apply?done";
+    }
 	
 	@RequestMapping(value="/searchapplication", method = RequestMethod.GET)
     public String showinfo(Model model){
