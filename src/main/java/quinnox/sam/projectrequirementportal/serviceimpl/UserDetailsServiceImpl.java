@@ -20,9 +20,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		User user =userRepository.getUserByUsername(username);
 		if(user==null)
 		{
-			throw new UsernameNotFoundException("");
+			throw new UsernameNotFoundException("user name not found");
 		}
-		return new MyUserDetails(user);
+		return new MyUserDetailsImpl(user);
 	}
 	
 
